@@ -1,0 +1,119 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "shared/styles/_variables.scss";
+@import "plugins/chatview/styles/chatbox.scss";
+@import "./muc-forms.scss";
+
+.conversejs {
+    .chatroom {
+        width: var(--chatroom-width);
+        @media screen and (max-height: $mobile-landscape-height){
+            width: var(--mobile-chat-width);
+        }
+        @media screen and (max-width: $mobile-portrait-length) {
+            width: var(--mobile-chat-width);
+        }
+
+        .box-flyout {
+            background-color: var(--chatroom-head-bg-color);
+            overflow-y: hidden;
+            width: var(--chatroom-width);
+
+            @media screen and (max-height: $mobile-landscape-height) {
+                height: var(--mobile-chat-height);
+                width: var(--mobile-chat-width);
+                height: var(--fullpage-chat-height);
+            }
+            @media screen and (max-width: $mobile-portrait-length) {
+                height: var(--mobile-chat-height);
+                width: var(--mobile-chat-width);
+                height: var(--fullpage-chat-height);
+            }
+
+            .empty-history-feedback {
+                position: relative;
+                span {
+                    width: 100%;
+                    text-align: center;
+                    position: absolute;
+                    margin-top: 50%;
+                }
+            }
+
+            .chatroom-body {
+                flex-direction: row;
+                flex-flow: nowrap;
+                background-color: var(--background);
+                border-top: 0;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+
+                converse-muc-chatarea {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-flow: nowrap;
+                }
+
+                .row {
+                    flex-direction: row;
+                }
+                .chat-topic {
+                    font-weight: bold;
+                    color: var(--chatroom-head-bg-color);
+                }
+                .chat-info {
+                    color: var(--chat-info-color);
+                    line-height: normal;
+                    &.badge {
+                        color: var(--chat-head-text-color);
+                    }
+                    &.chat-msg--retracted {
+                        color: var(--subdued-color);
+                    }
+                }
+                .disconnect-container {
+                    margin: 1em;
+                    width: 100%;
+                    h3.disconnect-msg {
+                        padding-bottom: 1em;
+                    }
+                }
+                .chat-area {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 1 100%;
+                    justify-content: flex-end;
+                    min-width: 25%;
+                    word-wrap: break-word;
+                    .new-msgs-indicator {
+                        background-color: var(--chatroom-color);
+                    }
+                    .chat-content {
+                        height: 100%;
+                    }
+                    .chat-content__help {
+                        converse-chat-help {
+                            border-top: 1px solid var(--chatroom-color);
+                        }
+                        .close-chat-help {
+                            svg {
+                                fill: var(--chatroom-color);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .room-invite {
+            .invited-contact {
+                margin: -1px 0 0 -1px;
+                width: 100%;
+                border: 1px solid #999;
+            }
+        }
+    }
+}

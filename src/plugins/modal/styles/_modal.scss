@@ -1,0 +1,112 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.conversejs {
+    @import "bootstrap/scss/modal";
+
+    .modal-header {
+        &.alert-danger {
+            background-color: var(--error-color);
+            color: var(--background);
+            border-bottom: none;
+
+            .close {
+                color: var(--background);
+            }
+        }
+    }
+
+    .modal-content {
+        background-color: var(--modal-background-color);
+    }
+
+    .modal-body {
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .occupant-details {
+        li {
+            margin-bottom: 1em;
+        }
+    }
+
+    #converse-modals {
+        .modal {
+            .nav-item {
+                margin: 0.25em;
+                &:hover {
+                    .nav-link {
+                        background-color: var(--primary-color-light);
+                        &.active {
+                            background-color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+
+            .modal-content {
+                box-shadow: var(--raised-el-shadow);
+            }
+
+            .modal-body {
+                overflow-y: auto;
+                max-height: 75vh;
+                margin-bottom: 2em;
+                p {
+                    padding: 0.25rem 0;
+                }
+                .confirm {
+                    .form-group {
+                        p:first-child {
+                            font-size: 110%;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                &.fit-content {
+                    box-sizing: content-box;
+
+                    img {
+                        max-width: 90vw;
+                    }
+                }
+            }
+            .modal-footer {
+                justify-content: flex-start;
+            }
+            .roomid-policy-error {
+                color: var(--error-color);
+                font-size: var(--font-size-small);
+                float: right;
+            }
+        }
+
+        .scrollable-container {
+            max-height: 45vh;
+            overflow-y: auto;
+        }
+
+        .role-form, .affiliation-form {
+            padding: 2em 0 1em 0;
+        }
+
+        .set-xmpp-status {
+            margin: 1em;
+            .custom-control-label {
+                padding-top: 0.25em;
+            }
+        }
+
+        #omemo-tabpanel {
+            margin-top: 1em;
+        }
+
+        .btn {
+            font-weight: normal;
+        }
+    }
+}

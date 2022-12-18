@@ -1,0 +1,32 @@
+.conversejs {
+    #controlbox {
+        .bookmarks-toggle, .bookmarks-toggle .fa {
+            color: var(--groupchats-header-color) !important;
+            &:hover {
+                color: var(--chatroom-head-bg-color-dark) !important;
+            }
+        }
+    }
+}
+
+.conversejs.fullscreen {
+    #controlbox {
+        #chatrooms {
+            .bookmarks-list {
+                dl.rooms-list.bookmarks {
+                    dd.available-chatroom {
+                        a.open-room {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+converse-bookmarks {
+    .list-item-link {
+        padding: 0 1em;
+    }
+}

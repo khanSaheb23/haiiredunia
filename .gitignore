@@ -1,0 +1,63 @@
+# Distribution directory
+dist
+
+# Editor fluff
+*~
+.sw?
+*.mo
+*.kpf
+.*.sw?
+
+.hg/
+.bzr/
+.svn/
+.project
+.pydevproject
+.idea
+.su?
+.sass-cache
+pip-selfcheck.json
+
+3rdparty/libsignal-protocol-javascript/
+*.map
+
+locale.zip
+sounds.zip
+
+analytics.js
+
+# virtualenv/python/buildout
+.*.cfg
+eggs
+.Python
+build
+share
+parts
+*.pyc
+*.egg-info
+lib
+lib64
+include
+bin
+develop-eggs
+pyvenv.cfg
+
+converse-logs/*.html
+
+Backbone.Overview
+tags
+transpile
+
+# Sphinx
+docs/html
+docs/doctrees
+
+# Node.js
+node_modules
+
+# OSX
+.DS_Store
+
+# Builds
+.sv?
+/vendor/

@@ -1,0 +1,51 @@
+.conversejs {
+    .chatbox {
+        &.headlines {
+            .chat-body {
+                background-color: var(--background);
+                .chat-message {
+                    color: var(--headline-message-color);
+                }
+                hr {
+                    border-bottom: var(--headline-separator-border-bottom);
+                }
+            }
+            .chat-content {
+                height: 100%;
+            }
+        }
+
+    }
+
+    .message {
+        &.chat-msg {
+            &.headline {
+                .chat-msg__body {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    #controlbox {
+        .controlbox-section {
+            .controlbox-heading--headline {
+                color: var(--headlines-head-text-color);
+            }
+        }
+    }
+
+
+    converse-chats {
+        &.converse-fullscreen {
+            .chatbox.headlines {
+                .box-flyout {
+                    background-color: var(--headlines-head-text-color);
+                }
+                .flyout {
+                    border-color: var(--headlines-head-text-color);
+                }
+            }
+        }
+    }
+}
